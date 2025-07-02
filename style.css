@@ -104,15 +104,30 @@ header {
 
 .block-header-section {
     display: flex;
-    flex-direction: row;
+    /* flex-direction: row; */
     /* flex-wrap: wrap; */
     justify-content: space-between;
     column-gap: 25px;
+    row-gap: 30px;
     /* background-color: aquamarine; */
 }
 
 .block-left-header {
+    width: min(955px, 49.74vw);
+    height: min(360px, 18.75vw);
+    background-color: aqua;
+    border-radius: 50px;
+    position: relative;
+}
+.block-left-header-title {
     
+    font-size: min(2.5vw, 48px);
+    /* font-style: italic; */
+    line-height: 100%;
+    position: absolute;
+    top: 50px;
+    left: 60px;
+    max-width: 80%;
 }
 .block-left-header-img {
     width: 100%;
@@ -126,7 +141,10 @@ header {
     position: relative;
     display: flex;
     flex-direction: column;
-
+    width: min(696px, 36.25vw);
+    height: min(360px, 18.75vw);
+    background-color: aquamarine;
+    row-gap: 30px;
 }
 .block-right-header-img {
     width: 100%;
@@ -160,13 +178,57 @@ header {
 
 .block-content-cards {
     display: flex;
-    flex-direction: row;
+    /* flex-direction: row; */
     /* flex-wrap: wrap; */
     justify-content: space-between;
     /* background-color: crimson; */
     column-gap: 25px;
     margin-top: 20px;
     position: relative;
+    
+}
+
+.block-content {
+    height: min(360px, 18.75vw);
+    width: min(360px, 18.75vw);
+    border-radius: 50px;
+    background-color: aqua;
+}
+.block-first-card {
+    position: absolute;
+    z-index: 1;
+    background-color: #141414;
+    width: min(360px, 18.75vw);
+    height: min(206px,10.73vw);
+    
+    border-radius: 50px;
+}
+.block-second-card {
+    position: absolute;
+    z-index: 2;
+    background-color: #959595;
+    width: min(360px, 18.75vw);
+    height: min(206px,10.73vw);
+    border-radius: 50px;
+    top: 108px;
+    
+}
+.block-third-card {
+    position: absolute;
+    z-index: 3;
+    background-color: #E8E9ED;
+    width: min(360px, 18.75vw);
+    height: min(151px, 7.86vw);
+    border-radius: 50px;
+    top: 209px;
+}
+
+.block-content.is-long {
+    height: min(360px, 18.75vw);
+    width: min(520px, 27.01vw);
+    border-radius: 50px;
+    background-color: aqua;
+    
 }
 
 .block-content-img {
