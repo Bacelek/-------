@@ -94,6 +94,7 @@ header {
     border-radius: 65px;
     font-size: min(0.94vw, 18px);
     font-weight: 600;
+    display: flex;
 }
 
 .main-block {
@@ -125,8 +126,8 @@ header {
     /* font-style: italic; */
     line-height: 100%;
     position: absolute;
-    top: 50px;
-    left: 60px;
+    top: 15%;
+    left: 5%;
     max-width: 80%;
 }
 .block-left-header-img {
@@ -146,6 +147,27 @@ header {
     background-color: aquamarine;
     row-gap: 30px;
 }
+
+.block-right-header-link {
+    /* background-color: brown; */
+    width: min(90px, 4.69vw);
+    /* width: 90px; */
+    aspect-ratio: 1;
+    /* display: flex; */
+    position: absolute;
+    top: 5%;
+    left: 3%;
+    border-radius: 50%;
+    
+}
+
+.block-right-arrow {
+    width: 100%;
+    /* position: absolute;
+    top: 5%;
+    left: 3%; */
+}
+
 .block-right-header-img {
     width: 100%;
     /* vertical-align: middle; */
@@ -169,12 +191,7 @@ header {
     left: 5%;
 }
 
-.block-right-arrow {
-    width: 13%;
-    position: absolute;
-    top: 5%;
-    left: 3%;
-}
+
 
 .block-content-cards {
     display: flex;
@@ -184,7 +201,8 @@ header {
     /* background-color: crimson; */
     column-gap: 25px;
     margin-top: 20px;
-    position: relative;
+    margin-bottom: 20px;
+    /* position: relative; */
     
 }
 
@@ -193,41 +211,119 @@ header {
     width: min(360px, 18.75vw);
     border-radius: 50px;
     background-color: aqua;
+    overflow: hidden;
+    /* display: flex; */
+    position: relative;
 }
 .block-first-card {
     position: absolute;
     z-index: 1;
     background-color: #141414;
-    width: min(360px, 18.75vw);
-    height: min(206px,10.73vw);
+    width: 100%;
+    height: 60%;
     
+    /* width: 360px;
+    height: 206px; */
+    /* display: flex; */
+    /* display: flex; */
+    /* width: min(360px, 18.75vw);
+    height: min(206px,10.73vw); */
+    /* width: 360px;
+    height: 206px; */
+    /* transition: transform 0.1s ease; */
     border-radius: 50px;
 }
+.block-first-card-filling {
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    margin-top: 7%;
+    column-gap: 11px;
+    /* position: absolute; */
+    /* top: 7%;
+    left: 15%; */
+}
+.block-first-card-number {
+    font-size: min(50px, 2.6vw);
+
+}
+.block-first-card-text {
+    font-size: min(25px, 1.3vw);
+}
+
+/* .block-first-card:hover {
+    transform: scale(1.01);
+    z-index: 5;
+} */
 .block-second-card {
     position: absolute;
     z-index: 2;
     background-color: #959595;
-    width: min(360px, 18.75vw);
-    height: min(206px,10.73vw);
+    width: 100%;
+    height: 60%;
+    display: block;
+    /* width: min(360px, 18.75vw);
+    height: min(206px,10.73vw); */
     border-radius: 50px;
-    top: 108px;
-    
+    /* top: 5.625vw; */
+    top: 30%;
+    /* transition: transform 0.1s ease; */
 }
+
+.block-second-card-filling {
+    color: #141414;
+    display: flex;
+    justify-content: center;
+    margin-top: 7%;
+    /* position: absolute; */
+    /* top: 7%;
+    left: 15%; */
+}
+
+.block-second-card-text {
+    font-size: min(25px, 1.3vw);
+}
+.block-second-card-text span {
+    background-color: #4AD764;
+    opacity: 62%;
+}
+
 .block-third-card {
     position: absolute;
     z-index: 3;
     background-color: #E8E9ED;
-    width: min(360px, 18.75vw);
-    height: min(151px, 7.86vw);
+    width: 100%;
+    height: 40%;
+    /* width: min(360px, 18.75vw);
+    height: min(151px, 7.86vw); */
     border-radius: 50px;
-    top: 209px;
+    /* top: 10.885vw; */
+    top: 60%;
+}
+
+.block-third-card-filling {
+    color: #141414;
+    column-gap: 11px;
+    display: flex;
+    justify-content: center;
+    margin-top: 7%;
+    /* position: absolute; */
+    /* top: 7%;
+    left: 15%; */
+}
+.block-third-card-number {
+    font-size: min(50px, 2.6vw);
+
+}
+.block-third-card-text {
+    font-size: min(25px, 1.3vw);
 }
 
 .block-content.is-long {
-    height: min(360px, 18.75vw);
+    /* height: min(360px, 18.75vw); */
     width: min(520px, 27.01vw);
-    border-radius: 50px;
-    background-color: aqua;
+    /* border-radius: 50px; */
+    /* background-color: aqua; */
     
 }
 
@@ -239,8 +335,8 @@ header {
 
 .block-content-link {
     position: relative;
-    height: 100%;
     display: flex;
+    height: 100%;
 }
 
 .block-content-link span {
