@@ -13,11 +13,23 @@ a {
 body {
     font-family: "Montserrat", sans-serif;
     font-weight: 600;
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
+    height: 100vh;
+    /* background-color: black; */
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
 }
 
 .container {
     padding: 0 min(120px, 6.25vw);
+}
+
+main {
+    /* height: 100%; */
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 
 /* Блок шапки */
@@ -33,6 +45,8 @@ body {
     column-gap: min(20px, 1.04vw);
     padding: min(10px, 0.52vw) 0;
     background-color: #F1F2F5;
+    /* background-color: burlywood; */
+    
     
     
 }
@@ -85,6 +99,11 @@ body {
 .main-block {
     max-width: 1680px;
     margin-inline: auto;
+    height: 100%;
+    /* height: 100vh; */
+    /* display: flex; */
+    /* flex-direction: column; */
+    background-color: rgb(30, 78, 78);
 }
 
 /* Блок индекс */
@@ -275,16 +294,21 @@ body {
 .swiper {
     width: 100%;
     height: 100%;
+    /* flex-grow: 1; */
     /* display: flex; */
     /* height: 500px; */
-    /* background-color: aqua; */
+    /* background-color: rgb(140, 0, 255); */
 }
 
 .swiper-slide {
     /* background-color: #4AD764; */
+    /* width: 100%; */
+    /* height: 100%; */
     /* height: 150px; */
     background-color: brown;
-    /* display: flex; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: auto !important;
 }
 
@@ -296,9 +320,25 @@ body {
 /* Блок Мероприятия */
 
 .events-swiper {
+    /* width: 100%;
+    height: min(650px,33.85vw); */
+    /* max-height: 100vh; */
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* justify-content: space-between; */
     width: 100%;
-    height: min(650px,33.85vw);
+    height: 100%;
+    margin-bottom: 10px;
+    
+    /* flex-grow: 1; */
+    /* height: auto; */
+    /* background-color: rgb(13, 46, 35); */
 }
+
+/* .events-swiper .swiper {
+    width: 100%;
+    height: 100%;
+} */
 
 .events-title{
     display: flex;
@@ -350,7 +390,7 @@ body {
 
 .news-swiper {
     width: 100%;
-    height: min(650px,33.85vw);
+    height: 100%;
 }
 
 .news-title{
@@ -375,13 +415,14 @@ body {
     /* background-color:aqua; */
     display: flex;
     flex-direction: column;
+    justify-content: center;
     width: min(35.68vw, 685px);
     height: 100%;
     /* border-radius: min(50px,2.6vw); */
     /* overflow: hidden; */
     position: relative;
-    padding: 10px;
-    margin: 10px;
+    /* padding: 10px;
+    margin: 10px; */
     
 }
 
@@ -397,7 +438,7 @@ body {
     border-radius: min(38px,1.97vw);
     font-size: min(22px, 1.145vw);
     left: 70%;
-    top: -1%;
+    top: 0.5%;
     font-weight: 500;
 
 }
@@ -406,7 +447,7 @@ body {
     position: relative;
     display: flex;
     
-    height: 45%;
+    height: 50%;
     background-color: #4AD764;
     border-radius: min(50px,2.6vw);
     margin-bottom: min(10px, 0.52vw);
@@ -419,7 +460,7 @@ body {
     flex-direction: column;
     background-color: #E8E9ED;
     /* justify-content: center; */
-    /* height: 45%; */
+    height: 45%;
     /* width: min(35.68vw, 685px); */
     width: 100%;
     border-radius: min(50px,2.6vw);
@@ -441,6 +482,55 @@ body {
     margin-bottom: min(20px, 1.04vw);
 }
 
+/* Блок страницы новостоей */
+
+.news-page-title{
+    display: flex;
+    align-items:baseline;
+    column-gap: min(50px,2.6vw);
+    
+}
+
+.news-page-title-text{
+    /* width: min(53.9vw, 1035px); */
+    width: 65%;
+}
+
+.news-page-title-text h1{
+    font-size: min(60px, 3.125vw);
+    color: #141414;
+}
+
+.news-page-title-date{
+    width: min(180px, 9.375vw);
+    height: min(2.86vw, 55px);
+    background-color: #141414;
+    color: #F9F9F9;
+    border-radius: min(63px,3.28vw);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.news-page-text {
+    font-size: min(1.458vw, 28px);
+    margin: min(3.65vw, 70px) 0;
+    color: #141414;
+}
+
+.news-page-photo {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: min(3.65vw, 70px);
+}
+
+.news-page-photo-item {
+    width: min(41.67vw, 800px);
+    height: min(19.8vw, 380px);
+    background-color: aqua;
+    border-radius: min(50px,2.6vw);
+}
+
 /* Блок инфо */
 
 .info-text {
@@ -448,13 +538,14 @@ body {
     font-style: italic;
     font-size: min(1.2vw, 25px);
     margin-top: min(2.6vw, 50px);
-    margin-bottom: min(7.8125vw, 150px);
+    /* margin-bottom: min(7.8125vw, 150px); */
 }
 
 .info-footer {
    display: flex;
    column-gap: min(1.2vw, 25px);
-   
+   position: fixed;
+   bottom: 3%;
 
 }
 
@@ -530,7 +621,12 @@ color: #4C4C4C;
 
 .documents-swiper {
     width: 100%;
-    height: min(650px,33.85vw);
+    height: 100%;
+    background-color: aquamarine;
+}
+
+.documents-swiper .swiper-slide {
+    
 }
 
 .documents-title{
@@ -568,16 +664,126 @@ color: #4C4C4C;
 }
 
 .block-documents-item {
-    background-color: aqua;
+    /* background-color: #E8E9ED; */
     display: flex;
     width: min(43.75vw, 840px);
-    height: min(5.47vw, 105px);
-    border-radius: min(25px,1.3vw);
+    /* height: min(5.47vw, 105px); */
+    /* border-radius: min(25px,1.3vw); */
+    align-items: center;
+    justify-content: right;
     /* overflow: hidden; */
-    /* position: relative; */
+    position: relative;
 }
 
-.block-documents-item::after {
- content: '';
+.block-documents-item-first-layer {
+    display: flex;
+    width: 100%;
+    height: min(5.47vw, 105px);
+    align-items: center;
+    background-color: #141414;
+    border-radius: min(25px,1.3vw);
+    position: absolute;
+    z-index: 0;
+}
 
+.block-documents-item-second-layer {
+    display: flex;
+    width: 100%;
+    height: min(5.47vw, 105px);
+    align-items: center;
+    background-color: #E8E9ED;
+    border-radius: min(25px,1.3vw);
+    position: absolute;
+    z-index: 1;
+}
+
+.block-documents-item:hover .block-documents-item-second-layer {
+    width: min(41.67vw, 800px);
+}
+
+.block-documents-item-link{
+    color: #141414;
+    display: flex;
+    /* background-color: black; */
+    position: relative;
+    max-height: 100%;
+    align-items: center;
+}
+
+.block-documents-item-text {
+    width: 70%;
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+    font-size: min(1.67vw, 32px);
+    color: #141414;
+    padding-left: min(1.67vw, 32px);
+}
+
+
+.block-documents-item-arrow {
+    /* width: 30%;
+    display: flex;
+    justify-content:right;
+    align-items: center; */
+    /* padding-right: min(1.67vw, 32px); */
+    /* background-color: aquamarine; */
+    width: min(40px, 2.08vw);
+    aspect-ratio: 1;
+    position: absolute;
+    right: 3%;
+}
+
+.block-documents-item-arrow img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Блок страницы документов */
+
+.documents-page-title {
+    display: flex;
+    align-items: baseline;
+    margin: min(50px,2.6vw) 0;
+    width: 70%;
+}
+
+.documents-page-title h1 {
+    font-size: min(40px, 2.08vw);
+    color: #141414;
+}
+
+.documents-page-text {
+    font-size: min(1.458vw, 28px);
+    margin: min(3.65vw, 70px) 0;
+    color: #141414;
+}
+
+.documents-page-photo {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.documents-page-photo-title {
+    margin-left: 3%;
+    align-self: flex-start;
+}
+
+.documents-page-photo-title h3{
+    font-size: min(1.458vw, 28px);
+    /* margin: min(3.65vw, 70px) 0; */
+    color: #141414;
+}
+
+.documents-page-photo-item {
+    width: min(87vw, 1676px);
+    height: min(31.145vw, 598px);
+    background-color: #EAECF1;
+    border-radius: min(50px,2.6vw);
+    /* margin-right: min(20px, 1.04vw); */
+    display: flex;
+    justify-content: center;
 }
