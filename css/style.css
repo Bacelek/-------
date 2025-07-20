@@ -787,3 +787,23 @@ color: #4C4C4C;
     display: flex;
     justify-content: center;
 }
+
+/* Блок пдд */
+
+.pdd-swiper {
+    width: 100%;
+    height: 100%;
+    background-color: aquamarine;
+}
+
+.pdd-swiper .swiper-slide {
+    /* background-color: #4AD764; */
+    /* width: 100%; */
+    /* height: 100%; */
+    /* height: 150px; */
+    /* height: auto ; */
+    height: 100px !important;
+    width: 500px !important;
+    
+}
+
